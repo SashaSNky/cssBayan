@@ -11,9 +11,7 @@ html {
     box-sizing: border-box;
   }
   .bayan-body{
-    
-   
-    
+    color: #1e5cd1;  
   }
 
   .bayan-wrap{
@@ -24,49 +22,36 @@ html {
     background-color: #f6f6ed;   
     box-shadow: 0 0 0.8rem rgb(185, 185, 185);
   }
-  .bayan-body:hover{
-    cursor: pointer;
-  }
-
-  .bayan-body:hover p{
+  .bayan-body:hover {
     color: #555555;
   }
-  
-  .bayan-body:hover .mem-icon{
-    display:block;
+
+   .bayan-body:hover .mem-icon{
+    display: block;
   }
 
   .bayan-title{
     font-size: 1.4 rem;
-
-    /* display: inline-block;  */
   }
+
 .mem-icon{
-    display:none;
+    display: none;
 }
   
-  .mem-img{
+.mem-img{
     display: none;
     max-width:20rem; 
     margin: 0.5rem auto;
-    /* transform: scale(0.5); 
-    transform-origin: top center; */
   }
   .mem-input{
     height: 0;
     width: 0;
     appearance: none;
   }
-  .mem-input:checked~.mem-img{
+  /* .mem-input:checked~.mem-img{
      display: block;     
-  }
+  } */
 
-  .mem-input:checked ~ .mem-icon {
-     display: block;  
-     transform: rotate(45deg);
-  }
- 
- 
   .mem-title{
     display: block;
     border-top: 0.1rem solid #ddd;
@@ -76,18 +61,23 @@ html {
   
   }
   .mem-text{
-    color: #1e5cd1;
     margin: 0;
     display: flex;
     justify-content: space-between; 
   }
-  .mem-title:hover{
-    cursor: pointer;
-  }
-  .mem-title:hover .mem-img{
+
+  .mem-title:hover .mem-img,
+  .mem-input:checked ~ .mem-img{
     display: block;    
   }
-  .mem-title:hover .mem-icon{
+
+  .mem-title:hover .mem-icon,
+  .mem-input:checked + p span{
     transform: rotate(45deg);
   }
   
+  @media (hover: hover) {
+    .bayan-body * {
+      cursor: pointer;
+    }
+  }
